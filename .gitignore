@@ -1,0 +1,62 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (don't commit large datasets!)
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.txt
+*.csv
+*.xlsx
+
+# Model files (can be large)
+models/*.pt
+models/*.pth
+models/*.h5
+models/*.pkl
+*.pt
+*.pth
+*.h5
+*.pkl
+*.safetensors
+
+# FAISS indexes
+*.index
+*.faiss
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Results/Outputs
+results/*.png
+results/*.jpg
+results/*.pdf
+
+# Cached models from HuggingFace
+.cache/
