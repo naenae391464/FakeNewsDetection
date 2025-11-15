@@ -1,33 +1,18 @@
-# Core - Fast and lightweight
-pandas==2.0.3
-numpy==1.24.4
-scikit-learn==1.3.2
-
-# NLP - Optimized versions
-nltk==3.8.1
-# Skip spacy - it's slow to load
-
-# Deep Learning - Optimized for speed
-torch==2.0.1  # Compatible with Python 3.9
-transformers==4.35.2
-# Use specific model versions to avoid downloading everything
-sentence-transformers==2.2.2
-
-# Vector Store - CPU optimized (FAST)
-faiss-cpu==1.7.4
-
-# API - Lightweight and fast
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-python-dotenv==1.0.0
-pydantic==2.5.0
-
-# OpenAI - Paid but FAST (your preference)
-openai==1.3.5
-
-# Visualization - Only what's needed
-matplotlib==3.7.3
-seaborn==0.13.0
-
-# Utilities
-python-multipart==0.0.6  # For file uploads
+# requirements.txt for Python 3.11+
+pandas>=2.1.0
+numpy>=1.26.0
+scikit-learn>=1.3.0
+nltk>=3.8.0
+torch>=2.1.0
+transformers>=4.35.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+openai>=1.0.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+python-multipart>=0.0.6
+joblib>=1.3.0
