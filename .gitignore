@@ -15,16 +15,8 @@ __pycache__/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Data files 
-*.csv
-*.xlsx
 
 # Model files 
-models/*.pt
-models/*.pth
-models/*.h5
-models/*.pkl
-models/saved_models/*.pkl
 *.pt
 *.pth
 *.h5
@@ -51,13 +43,6 @@ models/saved_models/*.pkl
 # Logs
 logs/
 *.log
-
-# Results/Outputs
-results/*.png
-results/*.jpg
-results/*.pdf
-results/*.txt
-results/*.csv
 
 # Cached models from HuggingFace
 .cache/
