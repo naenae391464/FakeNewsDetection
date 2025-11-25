@@ -21,15 +21,12 @@ This system combines traditional ML, transformer models, and RAG to:
 ```
 fake-review-detection/
 ├── README.md
-├── CODE/                        # All source code
-│   ├── backend/                 # FastAPI + ML models + RAG
-│   └── frontend/                # React UI
-├── DATA/                        # Datasets
-│   ├── raw/                     # Original 40K reviews
-│   └── processed/               # Cleaned data
-└── EVALUATIONS/                 # Performance results
-    ├── graphs/                  # Accuracy, ROC, confusion matrices
-    └── results_summary.md       # Key findings
+├── backend/                     # FastAPI + ML models + RAG
+│   ├── DATA/                        # Datasets
+│   |     └── raw/                     # Original 40K reviews
+│   |     └── processed/               # Cleaned data
+|   ├── complete_presentation_graphs/ # Performance results: Accuracy, ROC, confusion matrices, summary
+└── frontend/                    # React UI
 ```
 
 ---
@@ -97,7 +94,7 @@ pip install -r requirements.txt
 
 ### 3. Configure Environment Variables
 
-Create `CODE/backend/.env`:
+Create `backend/.env`:
 ```env
 # OpenAI API Key
 OPENAI_API_KEY=your_openai_api_key_here
@@ -111,12 +108,12 @@ OPENAI_API_KEY=your_openai_api_key_here
 3. Place in `DATA/raw/`
 
 **Download pre-trained models** (optional):
-- Place models in `CODE/backend/models/saved_models/`
-- Place RoBERTa in `CODE/backend/models/roberta_fake_review_model/`
+- Place models in `/backend/models/saved_models/`
+- Place RoBERTa in `/backend/models/roberta_fake_review_model/`
 
 ### 5. Start Backend Server
 ```bash
-# Make sure you're in CODE/backend/ directory
+# Make sure you're in /backend/ directory
 python quick_api_test.py
 ```
 
@@ -135,7 +132,7 @@ INFO:     Uvicorn running on http://0.0.0.0:8000
 ### 6. Frontend Setup (New Terminal)
 ```bash
 # Navigate to frontend
-cd CODE/frontend
+cd /frontend
 
 # Install dependencies
 npm install
@@ -160,7 +157,7 @@ Visit: **http://localhost:5173**
 
 ### Week 1: Traditional ML Models
 ```bash
-cd CODE/backend
+cd /backend
 python scripts/train_week1_models.py
 ```
 
@@ -169,7 +166,7 @@ python scripts/train_week1_models.py
 - Naive Bayes (88.97%)
 - SVM Linear (93.76%)
 
-**Output:** `CODE/backend/models/saved_models/`
+**Output:** `/backend/models/saved_models/`
 
 ### Week 2: Neural Networks (Skipped)
 
@@ -181,14 +178,14 @@ python scripts/train_week1_models.py
 1. Open https://colab.research.google.com
 2. Runtime → Change runtime → **T4 GPU**
 3. Upload dataset from `DATA/raw/`
-4. Run `CODE/backend/scripts/train_roberta_colab.py`
+4. Run `/backend/scripts/train_roberta_colab.py`
 
-**Output:** `CODE/backend/models/roberta_fake_review_model/` (95.75% accuracy)
+**Output:** `/backend/models/roberta_fake_review_model/` (95.75% accuracy)
 
 ### Week 4: RAG System Setup
 
 ```bash
-cd CODE/backend
+cd /backend
 python scripts/build_faiss_index.py
 ```
 
@@ -197,7 +194,7 @@ python scripts/build_faiss_index.py
 
 ## Generate Evaluation Graphs
 ```bash
-cd CODE/backend
+cd /backend
 python scripts/generate_presentation_graphs.py
 ```
 
@@ -209,7 +206,7 @@ python scripts/generate_presentation_graphs.py
 fake-review-detection/
 ├── README.md
 │
-├── CODE/
+├── /
 │   ├── backend/
 │   │   ├── data/processed/
 │   │   ├── models/
@@ -220,18 +217,14 @@ fake-review-detection/
 │   │   ├── .env
 │   │   ├── quick_api_test.py
 │   │   └── requirements.txt
+|   |   ├── DATA/
+|   |   │   ├── raw/fake_reviews_dataset.csv
+|   |   │   └── processed/
+|   |   ├── complete_presentation_graphs/
 │   └── frontend/
 │       ├── src/
 │       ├── package.json
 │       └── vite.config.js
-│
-├── DATA/
-│   ├── raw/fake_reviews_dataset.csv
-│   └── processed/
-│
-└── EVALUATIONS/
-    ├── graphs/
-    └── results_summary.md
 ```
 
 
