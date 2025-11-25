@@ -21,15 +21,12 @@ This system combines traditional ML, transformer models, and RAG to:
 ```
 fake-review-detection/
 ├── README.md
-├── CODE/                        # All source code
-│   ├── backend/                 # FastAPI + ML models + RAG
-│   └── frontend/                # React UI
-├── DATA/                        # Datasets
-│   ├── raw/                     # Original 40K reviews
-│   └── processed/               # Cleaned data
-└── EVALUATIONS/                 # Performance results
-    ├── graphs/                  # Accuracy, ROC, confusion matrices
-    └── results_summary.md       # Key findings
+├── backend/                     # FastAPI + ML models + RAG
+│   ├── DATA/                        # Datasets
+│        └── raw/                     # Original 40K reviews
+│        └── processed/               # Cleaned data
+|   ├── complete_presentation_graphs/ # Performance results: Accuracy, ROC, confusion matrices, summary
+└── frontend/                    # React UI
 ```
 
 ---
