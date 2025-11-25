@@ -19,7 +19,7 @@ This system combines traditional ML, transformer models, and RAG to:
 ## Repository Structure
 
 ```
-fake-review-detection/
+FakeNewsDetection/
 ├── README.md
 │
 ├── backend/                                      # FastAPI + ML models + RAG
