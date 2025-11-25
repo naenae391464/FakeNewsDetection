@@ -15,15 +15,11 @@ __pycache__/
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# Data files (don't commit large datasets!)
-data/raw/*.csv
-data/raw/*.json
-data/raw/*.txt
-data/processed/*.csv
+# Data files 
 *.csv
 *.xlsx
 
-# Model files (can be large)
+# Model files 
 models/*.pt
 models/*.pth
 models/*.h5
