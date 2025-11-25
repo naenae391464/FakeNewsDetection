@@ -209,33 +209,6 @@ python scripts/generate_presentation_graphs.py
 **Output:** `EVALUATIONS/graphs/` - 8 visualizations (accuracy, confusion matrices, ROC curves, etc.)
 
 
-## Detailed File Structure
-```
-fake-review-detection/
-├── README.md
-│
-├── /
-│   ├── backend/
-│   │   ├── data/processed/
-│   │   ├── models/
-│   │   │   ├── saved_models/
-│   │   │   └── roberta_fake_review_model/
-│   │   ├── scripts/
-│   │   ├── src/rag/
-│   │   ├── .env
-│   │   ├── quick_api_test.py
-│   │   └── requirements.txt
-|   |   ├── DATA/
-|   |   │   ├── raw/fake_reviews_dataset.csv
-|   |   │   └── processed/
-|   |   ├── complete_presentation_graphs/
-│   └── frontend/
-│       ├── src/
-│       ├── package.json
-│       └── vite.config.js
-```
-
-
 ## Tech Stack
 
 **Backend:** FastAPI, scikit-learn, PyTorch, Transformers, FAISS, Sentence-BERT, OpenAI GPT-4o-mini  
