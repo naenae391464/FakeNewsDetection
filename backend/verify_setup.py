@@ -7,7 +7,6 @@ print("=" * 50)
 print("VERIFYING SETUP")
 print("=" * 50)
 
-# Check imports
 print("\n✓ Checking package imports...")
 try:
     import sklearn
@@ -22,7 +21,6 @@ except ImportError as e:
     print(f"✗ Import error: {e}")
     sys.exit(1)
 
-# Check dataset
 print("\n✓ Checking dataset...")
 dataset_path = Path("data/raw/fake_reviews_dataset.csv")
 
@@ -32,7 +30,6 @@ if not dataset_path.exists():
     print("  Save as: backend/data/raw/fake_reviews_dataset.csv")
     sys.exit(1)
 
-# Load and verify dataset
 df = pd.read_csv(dataset_path)
 
 print(f"✓ Dataset loaded successfully!")
@@ -44,7 +41,6 @@ if 'label' in df.columns:
     print(f"    Real (0): {(df['label'] == 0).sum():,}")
     print(f"    Fake (1): {(df['label'] == 1).sum():,}")
     
-    # Verify balance
     if len(df) == 40000 and (df['label'] == 0).sum() == 20000:
         print("  ✓ Dataset is properly balanced!")
     else:
@@ -63,7 +59,7 @@ if 'text' in df.columns:
     print(f"    Max: {word_counts.max()} words")
 
 print("\n" + "=" * 50)
-print("✅ SETUP VERIFICATION COMPLETE!")
+print("SETUP VERIFICATION COMPLETE!")
 print("=" * 50)
 print("\nNext steps:")
 print("1. Start with notebooks/01_eda.ipynb for exploratory analysis")
